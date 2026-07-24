@@ -1,5 +1,5 @@
 {
-  "title": "1주차 1차시 - Docker 첫 컨테이너 실행하기",
+  "title": "1주차 2차시 - Docker 첫 컨테이너 실행하기",
   "description": "hello-world 이미지로 첫 컨테이너를 실행하고, 이미지·컨테이너 목록을 확인합니다.",
   "details": {
     "intro": {

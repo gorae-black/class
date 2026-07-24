@@ -1,0 +1,33 @@
+{
+  "title": "1주차 1차시 - 터미널 환경 익히기",
+  "description": "앞으로 15주간 계속 쓸 터미널 환경에 익숙해지고, 가상화로 할당된 자원을 직접 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "내 계정 확인하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "리눅스 시스템 정보 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "CPU 코어 수 확인하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "메모리 용량 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
