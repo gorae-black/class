@@ -9,9 +9,11 @@ docker images
 **실행 결과 예시**
 
 ```
-REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
-hello-world   latest    d2c94e258dcb   3 weeks ago     13.3kB
+IMAGE                ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello-world:latest   e2ac70e7319a       10.1kB             0B    U
 ```
 
-SIZE가 13.3kB밖에 안 되는 것에 주목하세요 — 컨테이너 이미지가 왜 가상머신(VM)보다 훨씬 가벼운지
-직접 확인한 것입니다.
+> Docker 버전에 따라 컬럼 구성이 다르게 보일 수 있습니다 (예전 버전은
+> `REPOSITORY TAG IMAGE ID CREATED SIZE` 형식으로 나옵니다). 어떤 포맷이든 상관없이
+> `hello-world` 이미지가 목록에 있고, 용량이 몇 KB 수준으로 매우 작다는 점에 주목하세요 —
+> 컨테이너 이미지가 왜 가상머신(VM)보다 훨씬 가벼운지 직접 확인한 것입니다.
