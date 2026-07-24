@@ -1,0 +1,33 @@
+{
+  "title": "1주차 1차시 - Docker 첫 컨테이너 실행하기",
+  "description": "hello-world 이미지로 첫 컨테이너를 실행하고, 이미지·컨테이너 목록을 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "첫 번째 컨테이너 실행하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "이미지 목록 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "컨테이너 목록 확인하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "(심화, 선택) 조금 더 살펴보기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
