@@ -38,10 +38,41 @@
 ```
 docker --version
 kubectl version --client
+```
+
+minikube는 설치만 되어 있을 뿐 자동으로 실행되어 있지 않으므로, 아래처럼 `minikube start`으로
+먼저 클러스터를 기동한 뒤 상태를 확인해야 합니다. (VM을 껐다 켤 때마다 매번 다시 실행해야 합니다.)
+
+```
+minikube start
 minikube status
 ```
 
-세 명령어 모두 오류 없이 버전/상태 정보가 출력되면 준비 완료입니다.
+`docker --version`과 `kubectl version --client`는 오류 없이 버전 정보가 출력되면 되고,
+`minikube status`는 host, kubelet, apiserver가 모두 **Running**으로 나와야 준비 완료입니다.
+stopped로 나온다면 `minikube start`를 먼저 실행하지 않았기 때문이니, `minikube start` 실행 후
+다시 확인하세요.
+
+## VM 종료하기
+
+실습을 마치고 VM을 끌 때는 반드시 아래처럼 정상 종료하세요. 전원 강제 종료(Power Off)는 다음
+실행 시 오류를 일으킬 수 있으니 피해야 합니다.
+
+- **VM 안에서 명령어로 종료 (권장)**
+  터미널에 로그인된 상태에서 아래 명령어를 입력합니다.
+
+  ```
+  sudo shutdown -h now
+  ```
+
+  (비밀번호 `a1234`를 물어보면 입력합니다. 화면에 아무것도 안 보이는 게 정상입니다.)
+
+- **VMware Workstation Player 메뉴에서 종료**
+  Player → Power → Shut Down Guest를 클릭합니다. VM 내부로 종료 신호를 보내 정상 종료됩니다.
+
+**주의:** Player → Power → Power Off(강제 종료)는 전원 코드를 뽑는 것과 같아서 파일시스템이
+손상될 수 있으니 급한 경우가 아니면 사용하지 마세요. 다음에 VM을 다시 켜서 실습을 이어갈 때는
+로그인 후 `minikube start`를 다시 실행해야 `minikube status`가 Running으로 나옵니다.
 
 ## 이 VM에 이미 설치되어 있는 것들
 
@@ -73,4 +104,7 @@ minikube status
 
 - VM이 켜지지 않는다 → BIOS에서 가상화(Intel VT-x/AMD-V) 옵션이 켜져 있는지 확인하세요.
 - 로그인이 안 된다 → 아이디/비밀번호는 `student` / `a1234`로 통일되어 있습니다.
+- minikube status가 stopped로 나온다 → `minikube start`를 실행하지 않았거나, VM을 재부팅해
+  클러스터가 다시 정지된 것입니다. VM을 켤 때마다 `minikube start`를 먼저 실행한 뒤 상태를
+  확인하세요.
 - 그 외 문제는 LMS Q&A 게시판에 캡처와 함께 남겨주세요.
