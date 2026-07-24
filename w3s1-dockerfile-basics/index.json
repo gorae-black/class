@@ -1,0 +1,33 @@
+{
+  "title": "3주차 1차시 - Dockerfile 문법과 첫 빌드",
+  "description": "빈칸으로 된 Node.js 앱용 Dockerfile을 완성하고, docker build로 직접 이미지를 만들어봅니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Node.js 앱 파일 준비하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "빈칸 Dockerfile 완성하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "이미지 빌드하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "컨테이너 실행하고 정상 동작 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

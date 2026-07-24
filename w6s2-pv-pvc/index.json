@@ -1,0 +1,33 @@
+{
+  "title": "6주차 2차시 - PV와 PVC로 데이터 지키기",
+  "description": "hostPath 기반 PersistentVolume을 만들고 PersistentVolumeClaim으로 연결해 Bound 상태를 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "PV(PersistentVolume) 만들기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "PV 상태 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "PVC(PersistentVolumeClaim) 만들기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "PV·PVC가 Bound 되었는지 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

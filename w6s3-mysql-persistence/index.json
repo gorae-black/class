@@ -1,0 +1,41 @@
+{
+  "title": "6주차 3차시 - MySQL로 데이터 영속성 검증하기",
+  "description": "PVC를 MySQL Pod에 연결하고, Pod를 강제로 삭제했다가 다시 살아나도 데이터가 그대로인지 직접 검증합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "PVC를 연결한 MySQL 배포하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "MySQL Pod 실행 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "MySQL에 접속해 테이블과 데이터 만들기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Pod를 강제로 삭제하기",
+        "text": "step4/text.md"
+      },
+      {
+        "title": "새 Pod가 준비될 때까지 기다리기",
+        "text": "step5/text.md"
+      },
+      {
+        "title": "데이터가 그대로인지 확인하기",
+        "text": "step6/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

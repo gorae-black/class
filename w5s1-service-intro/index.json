@@ -1,0 +1,33 @@
+{
+  "title": "5주차 1차시 - Service 등장 배경과 Pod IP 확인",
+  "description": "myapp Deployment의 Pod를 삭제해보며 Pod IP가 계속 바뀌는 문제를 직접 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "myapp Deployment 다시 만들기 (4주차 복습)",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Pod마다 IP가 다른지 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Pod 하나 삭제하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "새로 생긴 Pod의 IP 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "2주차 1차시 - 컨테이너 명령어 심화",
+  "description": "컨테이너 생명주기(run/stop/start/rm)와 logs·exec로 컨테이너 내부를 들여다보는 법을 실습합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "새 컨테이너 실행하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "컨테이너 멈추기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "정지 상태 확인하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "컨테이너 다시 시작하기",
+        "text": "step4/text.md"
+      },
+      {
+        "title": "실행 상태 확인하기",
+        "text": "step5/text.md"
+      },
+      {
+        "title": "로그 확인하기",
+        "text": "step6/text.md"
+      },
+      {
+        "title": "컨테이너 내부 들어가기",
+        "text": "step7/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

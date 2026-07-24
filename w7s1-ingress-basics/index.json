@@ -1,0 +1,29 @@
+{
+  "title": "7주차 1차시 - Ingress 개념",
+  "description": "Ingress 컨트롤러를 설치하고, Ingress 컨트롤러 Pod 상태와 Ingress 리소스의 구조를 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Ingress 컨트롤러 설치하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "컨트롤러 Pod 상태 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "kubectl explain으로 Ingress 구조 살펴보기",
+        "text": "step3/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

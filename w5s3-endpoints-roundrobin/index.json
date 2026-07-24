@@ -1,0 +1,33 @@
+{
+  "title": "5주차 3차시 - Endpoints와 라운드로빈 확인",
+  "description": "kubectl get endpoints와 반복 curl, 로그 확인으로 라운드로빈 부하분산을 직접 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "myapp Deployment와 NodePort Service 다시 만들기 (복습)",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Endpoints로 연결된 Pod IP 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "반복 curl로 요청 여러 번 보내기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Pod 로그로 라운드로빈 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

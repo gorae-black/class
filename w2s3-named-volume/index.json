@@ -1,0 +1,33 @@
+{
+  "title": "2주차 3차시 - 데이터 영속성 심화 (Named Volume vs Bind Mount)",
+  "description": "Bind Mount의 실시간 반영을 직접 확인하고, Docker가 관리하는 Named Volume을 만들어 비교합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "(복습) Bind Mount 컨테이너 다시 만들기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "HTML 파일 수정하고 실시간 반영 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Named Volume 만들기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Named Volume으로 컨테이너 실행하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

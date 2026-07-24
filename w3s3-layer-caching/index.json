@@ -1,0 +1,41 @@
+{
+  "title": "3주차 3차시 - 레이어 캐싱과 이미지 최적화",
+  "description": "Dockerfile 순서를 바꿔가며 레이어 캐싱을 체감하고, .dockerignore로 이미지를 최적화합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "실습 파일 준비하기 (나쁜 순서)",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "나쁜 순서로 첫 빌드하고 시간 기록하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "코드 수정 후 재빌드해서 캐시 미스 확인하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "좋은 순서로 바꿔서 캐시 효과 확인하기",
+        "text": "step4/text.md"
+      },
+      {
+        "title": ".dockerignore로 불필요한 파일 제외하기",
+        "text": "step5/text.md"
+      },
+      {
+        "title": "(심화, 선택) Docker Hub에 이미지 올리기",
+        "text": "step6/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

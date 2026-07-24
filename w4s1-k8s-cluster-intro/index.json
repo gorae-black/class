@@ -1,0 +1,25 @@
+{
+  "title": "4주차 1차시 - K8s 클러스터 첫 접속과 노드 확인",
+  "description": "Kubernetes 클러스터에 처음 접속해서 노드 목록과 Control Plane 주소를 눈으로 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "클러스터 노드 확인하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Control Plane 정보 확인하기",
+        "text": "step2/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

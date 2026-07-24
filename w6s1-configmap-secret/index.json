@@ -1,0 +1,37 @@
+{
+  "title": "6주차 1차시 - ConfigMap과 Secret",
+  "description": "ConfigMap으로 일반 설정값을, Secret으로 비밀번호 같은 민감 정보를 코드에서 분리해 관리합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "ConfigMap 만들기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Secret 만들기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Base64는 암호화가 아니다 확인하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "ConfigMap·Secret 값을 환경변수로 불러오는 Pod 작성하기",
+        "text": "step4/text.md"
+      },
+      {
+        "title": "Pod 안에서 환경변수 확인하기",
+        "text": "step5/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

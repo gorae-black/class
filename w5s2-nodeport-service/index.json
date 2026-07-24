@@ -1,0 +1,33 @@
+{
+  "title": "5주차 2차시 - NodePort Service로 접속하기",
+  "description": "myapp Deployment에 NodePort Service를 연결해서 외부에서 접속해봅니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "myapp Deployment 다시 만들기 (복습)",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "NodePort Service 만들기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "할당된 포트 번호 확인하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "curl로 접속 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

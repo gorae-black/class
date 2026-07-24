@@ -1,0 +1,33 @@
+{
+  "title": "2주차 2차시 - Bind Mount로 데이터 지키기",
+  "description": "Bind Mount로 VM 디렉토리와 컨테이너를 연결해, 컨테이너를 지워도 데이터가 남도록 만듭니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "HTML 파일을 담을 폴더 만들기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "HTML 파일 만들기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Bind Mount로 컨테이너 실행하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "웹 서버 응답 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

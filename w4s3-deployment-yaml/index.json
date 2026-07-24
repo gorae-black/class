@@ -1,0 +1,33 @@
+{
+  "title": "4주차 3차시 - Deployment YAML 작성과 배포",
+  "description": "Deployment YAML을 작성해 클러스터에 배포하고, Pod가 자동으로 2개 생성되는 과정을 관찰합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "노드 확인 (복습)",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "deployment.yaml 작성하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Deployment 배포하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Pod가 생성되는 과정 관찰하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

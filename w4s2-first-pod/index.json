@@ -1,0 +1,29 @@
+{
+  "title": "4주차 2차시 - Pod 실행하고 점검하기",
+  "description": "kubectl run으로 첫 Pod를 실행하고, get/describe로 상태와 배치된 노드를 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "첫 Pod 실행하기",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Pod 상태 확인하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Pod 상세 정보 확인하기",
+        "text": "step3/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

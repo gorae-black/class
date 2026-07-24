@@ -1,0 +1,33 @@
+{
+  "title": "7주차 2차시 - Ingress 라우팅 실습",
+  "description": "경로 기반 Ingress 규칙을 작성해 적용하고, curl로 경로별로 다른 서비스에 연결되는지 확인합니다.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Ingress 컨트롤러 켜기 (1차시 복습)",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "라우팅 대상이 될 백엔드 앱 두 개 준비하기",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "경로 기반 Ingress 리소스 작성하고 적용하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "curl로 경로별 라우팅 확인하기",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
