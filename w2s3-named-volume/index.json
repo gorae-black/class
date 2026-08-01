@@ -21,6 +21,22 @@
       {
         "title": "Named Volume으로 컨테이너 실행하기",
         "text": "step4/text.md"
+      },
+      {
+        "title": "Named Volume의 실제 저장 위치 확인하기",
+        "text": "step5/text.md"
+      },
+      {
+        "title": "webvol2 접속하고 Bind Mount와 다른 점 확인하기",
+        "text": "step6/text.md"
+      },
+      {
+        "title": "Named Volume에 직접 파일 써넣기",
+        "text": "step7/text.md"
+      },
+      {
+        "title": "컨테이너를 지워도 데이터는 남는다",
+        "text": "step8/text.md"
       }
     ],
     "finish": {
