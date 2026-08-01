@@ -17,6 +17,10 @@
       {
         "title": "Pod 강제 삭제하고 자가치유 관찰하기",
         "text": "step3/text.md"
+      },
+      {
+        "title": "전체 리소스 한눈에 보기",
+        "text": "step4/text.md"
       }
     ],
     "finish": {

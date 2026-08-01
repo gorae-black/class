@@ -21,6 +21,18 @@
       {
         "title": "Pod가 생성되는 과정 관찰하기",
         "text": "step4/text.md"
+      },
+      {
+        "title": "ReplicaSet 확인하기",
+        "text": "step5/text.md"
+      },
+      {
+        "title": "스케일 조정하기",
+        "text": "step6/text.md"
+      },
+      {
+        "title": "Pod 로그 확인하기",
+        "text": "step7/text.md"
       }
     ],
     "finish": {

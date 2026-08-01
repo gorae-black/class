@@ -13,6 +13,14 @@
       {
         "title": "Control Plane 정보 확인하기",
         "text": "step2/text.md"
+      },
+      {
+        "title": "노드 상세 정보 확인하기",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Control Plane도 결국 Pod다",
+        "text": "step4/text.md"
       }
     ],
     "finish": {

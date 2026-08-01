@@ -17,6 +17,14 @@
       {
         "title": "Pod 상세 정보 확인하기",
         "text": "step3/text.md"
+      },
+      {
+        "title": "로그 확인하기",
+        "text": "step4/text.md"
+      },
+      {
+        "title": "Pod 삭제하기",
+        "text": "step5/text.md"
       }
     ],
     "finish": {

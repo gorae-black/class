@@ -21,6 +21,10 @@
       {
         "title": "Pod 로그로 라운드로빈 확인하기",
         "text": "step4/text.md"
+      },
+      {
+        "title": "Pod 삭제 후 Endpoints 자동 갱신 확인하기",
+        "text": "step5/text.md"
       }
     ],
     "finish": {

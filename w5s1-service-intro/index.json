@@ -21,6 +21,10 @@
       {
         "title": "새로 생긴 Pod의 IP 확인하기",
         "text": "step4/text.md"
+      },
+      {
+        "title": "사라진 Pod의 옛 IP로 접속해보기",
+        "text": "step5/text.md"
       }
     ],
     "finish": {

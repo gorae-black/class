@@ -17,6 +17,10 @@
       {
         "title": "kubectl explain으로 Ingress 구조 살펴보기",
         "text": "step3/text.md"
+      },
+      {
+        "title": "Ingress rules 필드 자세히 보기",
+        "text": "step4/text.md"
       }
     ],
     "finish": {

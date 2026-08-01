@@ -6,8 +6,8 @@
 
 1. `webvol`의 index.html 수정 후 즉시 반영되는 화면
 2. Named Volume으로 만든 `webvol2` 컨테이너 실행 결과
-3. `webvol2`에 curl 접속 시 `403 Forbidden`이 뜨는 화면과, `docker exec`로 파일을 써넣은 뒤
-   다시 curl해 정상 출력되는 화면
+3. `webvol2`에 curl 접속 시 nginx 기본 페이지(`Welcome to nginx!`)가 뜨는 화면과, `docker exec`로
+   파일을 써넣은 뒤 다시 curl해 정상 출력되는 화면
 4. `webvol2` 삭제 후 `docker volume ls`로 `mydata`가 남아있는 것을 확인한 화면
 
 오늘이 2주차 마지막 시간이므로, 1차시(생명주기 명령어)·2차시(Bind Mount)·3차시(오늘) 실습
