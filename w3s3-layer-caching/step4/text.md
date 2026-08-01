@@ -33,7 +33,7 @@ time docker build -t myflask:good .
 
 ```
 [+] Building 1.1s (9/9) FINISHED
- => [1/4] FROM docker.io/library/python:3.11-slim
+ => CACHED [1/4] FROM docker.io/library/python:3.11-slim
  => CACHED [2/4] WORKDIR /app
  => CACHED [3/4] RUN pip install flask
  => [4/4] COPY app.py .

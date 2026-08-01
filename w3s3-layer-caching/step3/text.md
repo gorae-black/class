@@ -14,8 +14,8 @@ time docker build -t myflask:bad .
 
 ```
 [+] Building 12.9s (9/9) FINISHED
- => [1/4] FROM docker.io/library/python:3.11-slim
- => [2/4] WORKDIR /app
+ => CACHED [1/4] FROM docker.io/library/python:3.11-slim
+ => CACHED [2/4] WORKDIR /app
  => [3/4] COPY app.py .
  => [4/4] RUN pip install flask
  => exporting to image
@@ -25,7 +25,8 @@ user    0m0.041s
 sys     0m0.029s
 ```
 
-빌드 출력에서 `CACHED` 표시 없이 `COPY app.py .`와 `RUN pip install flask` 두 줄이 다시 실제로
-실행된 것을 확인하세요. `app.py`가 바뀌면서 `COPY` 레이어가 바뀌었고, 그 아래에 있는
-`RUN pip install flask`까지 처음부터 다시 실행된 것입니다. `time` 결과도 이전 단계와 비슷하게
-오래 걸렸을 것입니다 — 캐시의 이점을 전혀 못 본 것입니다.
+빌드 출력에서 `FROM`과 `WORKDIR`는 `CACHED`로 표시되지만, `COPY app.py .`와
+`RUN pip install flask` 두 줄은 `CACHED` 없이 다시 실제로 실행된 것을 확인하세요. `app.py`가
+바뀌면서 `COPY` 레이어가 바뀌었고, 그 아래에 있는 `RUN pip install flask`까지 처음부터 다시
+실행된 것입니다. `time` 결과도 이전 단계와 비슷하게 오래 걸렸을 것입니다 — 정작 시간이 오래
+걸리는 `RUN pip install flask`에서는 캐시의 이점을 못 본 것입니다.

@@ -13,6 +13,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
+  storageClassName: ""
 EOF
 kubectl apply -f pvc.yaml
 ```

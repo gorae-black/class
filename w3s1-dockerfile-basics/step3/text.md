@@ -9,9 +9,9 @@ docker build -t mynode:v1 .
 
 ```
 [+] Building 4.2s (10/10) FINISHED
- => [1/4] FROM docker.io/library/node:18-slim
- => [2/4] WORKDIR /app
- => [3/4] COPY package.json .
+ => [1/5] FROM docker.io/library/node:18-slim
+ => [2/5] WORKDIR /app
+ => [3/5] COPY package.json .
  => [4/5] RUN npm install
  => [5/5] COPY app.js .
  => exporting to image
