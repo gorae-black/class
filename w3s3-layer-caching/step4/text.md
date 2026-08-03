@@ -20,7 +20,7 @@ time docker build -t myflask:good .
 이제 다시 코드를 한 줄 고치고,
 
 ```
-sed -i "s/updated/updated again/" app.py
+sed -i 's/updated/updated again/' app.py
 ```
 
 같은 '좋은' 순서 `Dockerfile`로 다시 빌드해봅니다.

@@ -1,7 +1,7 @@
 이제 코드를 한 줄만 살짝 고쳐보겠습니다. 응답 문자열만 바꿔봅니다.
 
 ```
-sed -i "s/Hello, Cloud!/Hello, Cloud! (updated)/" app.py
+sed -i 's/Hello, Cloud!/Hello, Cloud! (updated)/' app.py
 ```
 
 같은 '나쁜' 순서 `Dockerfile`로 다시 빌드하고 시간을 재봅니다.
