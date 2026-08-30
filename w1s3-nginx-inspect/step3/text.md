@@ -16,5 +16,4 @@ docker inspect web | grep IPAddress
                     "IPAddress": "172.17.0.2",
 ```
 
-`IPAddress` 값이 이 nginx 컨테이너에 할당된 내부 IP입니다. 실무에서 컨테이너가 이상하게 동작할 때
-가장 먼저 치는 명령어가 바로 이 `docker inspect`입니다.
+`IPAddress` 값이 이 nginx 컨테이너에 할당된 내부 IP입니다.
