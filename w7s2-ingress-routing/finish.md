@@ -1,9 +1,8 @@
 여기까지 오늘의 Killercoda 실습입니다. 수고하셨습니다!
 
-**다음 순서 (필수 제출)**
+**다음 순서**
 
-개인 VM에서 아래 순서로 진행하고, `curl http://myapp.local` 접속에 성공한 화면을 캡처해서
-제출해주세요.
+개인 VM에서 아래 순서로 진행하고, `curl http://myapp.local` 접속에 성공하는지 확인해보세요.
 
 1. `echo "$(minikube ip) myapp.local" | sudo tee -a /etc/hosts` — VM 계정 비밀번호 입력이
    필요합니다.

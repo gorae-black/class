@@ -9,7 +9,7 @@
 **다음 순서**
 
 개인 로컬 VM에서도 `kubectl create configmap`으로 간단한 설정값을 하나, `kubectl create secret
-generic`으로 비밀값을 하나 만들어보세요. `kubectl get configmap`, `kubectl get secret`으로 확인한
-결과를 캡처해서 LMS 과제 게시판에 제출해주세요.
+generic`으로 비밀값을 하나 만들어보세요. `kubectl get configmap`, `kubectl get secret`으로
+확인해보세요.
 
 다음 2차시에서는 "데이터를 영구적으로 저장하는 방법", PV와 PVC를 배웁니다.

@@ -8,8 +8,7 @@
 **다음 순서**
 
 개인 로컬 VM에서도 동일하게 pv.yaml, pvc.yaml을 작성하고 적용해보세요. `kubectl get pv`,
-`kubectl get pvc` 결과를 캡처해서 STATUS가 Bound로 나오는지 확인한 화면을 LMS 과제 게시판에
-제출해주세요.
+`kubectl get pvc`로 STATUS가 Bound로 나오는지 확인해보세요.
 
 **꼭 기억하세요**: 오늘 만든 PV와 PVC는 지우지 말고 그대로 남겨두세요. 다음 3차시에서 바로 이
 PVC를 실제 MySQL Pod에 연결합니다.
