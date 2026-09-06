@@ -1,5 +1,4 @@
-`docker start`로 정지된 컨테이너를 다시 켭니다. 이미 만들어져 있는 컨테이너를 그대로 재실행하는
-것이므로, `docker run`처럼 이미지를 새로 pull하거나 컨테이너를 새로 만들지 않습니다.
+`docker start`로 정지된 컨테이너를 다시 켭니다.
 
 ```
 docker start web2

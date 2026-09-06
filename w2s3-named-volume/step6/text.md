@@ -8,13 +8,10 @@ curl <위에서 확인한 IP주소>
 **실행 결과 예시**
 
 ```
-<html>
-<head><title>Welcome to nginx!</title></head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed...</p>
-</body>
-</html>
+403 Forbidden
 ```
 
-nginx 기본 환영 페이지(`Welcome to nginx!`)가 나오면 정상입니다.
+`webvol2`는 방금 만든 **빈** Named Volume을 연결한 것이라 아직 `index.html`이 없습니다. 그래서
+`Welcome to nginx!` 기본 페이지 대신 `403 Forbidden`이 나오는 것이 정상입니다. 처음부터 파일이
+있던 Bind Mount(`webvol`)와 달리, Named Volume은 빈 상태로 시작한다는 차이를 보여주는
+결과입니다.

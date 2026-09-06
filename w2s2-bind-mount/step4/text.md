@@ -11,5 +11,4 @@ curl localhost:8080
 <h1>Hello Cloud!</h1>
 ```
 
-방금 `~/html/index.html`에 적어둔 내용이 그대로 출력되면 성공입니다. VM의 파일이 Bind Mount를
-통해 컨테이너 안의 웹 서버가 보여주는 페이지와 완전히 같은 파일이라는 것을 확인한 것입니다.
+방금 `~/html/index.html`에 적어둔 내용이 그대로 출력되면 성공입니다.
