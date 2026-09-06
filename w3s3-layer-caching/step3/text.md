@@ -25,5 +25,4 @@ user    0m0.041s
 sys     0m0.029s
 ```
 
-`FROM`과 `WORKDIR`는 `CACHED`로 표시되고, `COPY app.py .`와 `RUN pip install flask`만
-`CACHED` 없이 다시 실행되면 정상입니다.
+`FROM`과 `WORKDIR`는 `CACHED`로 표시되고, `COPY`·`RUN`만 다시 실행되면 정상입니다.

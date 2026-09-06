@@ -1,5 +1,4 @@
-오늘 강의에서 본 것처럼, 아래는 일부(`FROM` / `COPY` / `RUN` / `CMD`)가 빈칸으로 되어 있는
-`Dockerfile`입니다.
+아래는 일부(`FROM` / `COPY` / `RUN` / `CMD`)가 빈칸으로 되어 있는 `Dockerfile`입니다.
 
 ```
 FROM ____

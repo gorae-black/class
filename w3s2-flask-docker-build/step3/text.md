@@ -23,5 +23,4 @@ docker build -t myflask:v1 .
 docker images
 ```
 
-`pip install flask` 과정에서 시간이 조금 걸릴 수 있습니다 — 파이썬 기반 이미지를 내려받고 그 위에
-Flask 라이브러리까지 설치하기 때문입니다.
+`pip install flask` 과정에서 시간이 조금 걸릴 수 있습니다.
