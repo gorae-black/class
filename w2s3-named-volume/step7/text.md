@@ -1,4 +1,5 @@
-`docker exec`로 `webvol2` 안에 파일을 직접 작성합니다.
+`docker exec`로 `webvol2` 안에 파일을 직접 작성해서, 기본 환영 페이지를 우리가 쓴 내용으로
+덮어써봅니다.
 
 ```
 docker exec webvol2 sh -c "echo '<h1>Named Volume Test</h1>' > /usr/share/nginx/html/index.html"
@@ -11,4 +12,4 @@ curl <IP주소>
 <h1>Named Volume Test</h1>
 ```
 
-방금 전 `403 Forbidden`이었던 것과 달리, 이번엔 파일이 생겨서 정상적으로 출력되면 성공입니다.
+기본 환영 페이지 대신 방금 쓴 내용이 출력되면 성공입니다.
