@@ -10,7 +10,8 @@
 '선언적 관리'가 실제로 작동하는 모습입니다. 이 원리는 7주차 '자가치유' 시간에 자세히 다룹니다,
 오늘은 맛보기입니다.
 
-(선택) `kubectl get rs`·`kubectl scale`·`kubectl logs`도 개인 VM에서 반복해보면 좋습니다.
+이어서 `kubectl get rs`로 ReplicaSet을 확인하고, `kubectl scale`로 4개→2개 조정, `kubectl logs`로
+Pod 로그 확인까지 개인 VM에서도 그대로 반복해보세요.
 
 4주차 수고 많으셨습니다! K8s가 왜 필요한지부터 Pod, Deployment까지 — Kubernetes의 첫 관문을 잘
 넘으셨습니다. 다음 5주차에서는 Pod마다 IP가 다르고 죽었다 살아나면 바뀌는 문제를 해결하는
