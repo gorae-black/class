@@ -8,9 +8,13 @@ kubectl get endpoints myapp
 **실행 결과 예시**
 
 ```
+Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice
 NAME    ENDPOINTS                       AGE
 myapp   10.244.0.5:80,10.244.0.6:80     30s
 ```
 
 `ENDPOINTS` 칸에 Pod IP 2개가 콤마로 구분되어 나열되어 있습니다. 이게 바로 Service의 '연결 장부' —
 지금 이 Service 뒤에 실제로 연결된 Pod가 정확히 몇 개, 어느 IP인지 보여줍니다.
+
+맨 위의 `Warning:` 줄은 K8s 1.33부터 Endpoints API가 EndpointSlice로 대체되어 가고 있다는 안내일
+뿐이므로 무시해도 됩니다. 명령은 정상적으로 실행된 것입니다.

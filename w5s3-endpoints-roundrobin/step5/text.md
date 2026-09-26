@@ -9,6 +9,7 @@ kubectl get endpoints myapp
 
 ```
 pod "myapp-7d9f8c6b5d-abcde" deleted
+Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice
 NAME    ENDPOINTS                       AGE
 myapp   10.244.0.6:80,10.244.0.8:80     3m
 ```
