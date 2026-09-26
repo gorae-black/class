@@ -4,4 +4,10 @@
 curl <Step 3에서 삭제한 Pod의 IP>
 ```
 
+**실행 결과 예시**
+
+```
+curl: (28) Failed to connect to 10.244.0.5 port 80: Connection timed out
+```
+
 응답이 오지 않으면 정상입니다. Pod가 사라지면 그 IP도 함께 사라집니다.

@@ -29,5 +29,3 @@ kubectl apply -f deployment.yaml
 ```
 deployment.apps/myapp created
 ```
-
-이제 이 Deployment가 오늘 1~3차시 내내 계속 사용할 대상입니다. 지우지 마세요.
