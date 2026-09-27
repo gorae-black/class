@@ -2,7 +2,8 @@
 (`{mysql파드이름}`은 앞 단계에서 확인한 실제 Pod 이름으로 바꿔서 실행하세요.)
 
 ```
-kubectl exec -it {mysql파드이름} -- mysql -uroot -pSuperSecret123 -e "CREATE DATABASE testdb; USE testdb; CREATE TABLE users (id INT, name VARCHAR(20)); INSERT INTO users VALUES (1, 'kim'); SELECT * FROM users;"
+kubectl exec -it {mysql파드이름} -- mysql -uroot -pSuperSecret123 \
+  -e "CREATE DATABASE testdb; USE testdb; CREATE TABLE users (id INT, name VARCHAR(20)); INSERT INTO users VALUES (1, 'kim'); SELECT * FROM users;"
 ```
 
 **실행 결과 예시**

@@ -2,7 +2,8 @@
 파드이름}`은 앞 단계에서 확인한 새 Pod 이름으로 바꿔서 실행하세요.)
 
 ```
-kubectl exec -it {새 파드이름} -- mysql -uroot -pSuperSecret123 -e "USE testdb; SELECT * FROM users;"
+kubectl exec -it {새 파드이름} -- mysql -uroot -pSuperSecret123 \
+  -e "USE testdb; SELECT * FROM users;"
 ```
 
 **실행 결과 예시**

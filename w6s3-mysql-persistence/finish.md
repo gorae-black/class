@@ -5,7 +5,8 @@
 개인 VM에서 `minikube start` 후 `kubectl get pv,pvc`로 2차시에 만든 `mysql-pv`, `mysql-pvc`가 `Bound`
 상태로 남아 있는지 확인하세요(없다면 Step 1과 동일한 `pv.yaml`, `pvc.yaml`을 다시 적용하세요). 그다음
 동일한 절차로 MySQL을 배포하고, Pod 삭제 **전**의 SELECT 결과와 삭제 **후** 새 Pod에서의 SELECT 결과를
-비교해 데이터가 동일한지 확인해보세요.
+비교해 데이터가 동일한지 확인해보세요. 단, `\`로 두 줄에 나눠 쓴 mysql 명령은 VM에서는 한 줄로
+입력하세요. VM 콘솔에 여러 줄 명령을 붙여넣으면 줄이 끊겨 `-e: command not found` 오류가 날 수 있습니다.
 
 **다음 주 예고**: 7주차에서는 여러 Service를 하나의 진입점으로 묶어주는 **Ingress**, 그리고 K8s가 장애
 상황에서 스스로 복구하는 **자가치유** 능력을 배웁니다.
