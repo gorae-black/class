@@ -9,8 +9,11 @@
 **제출**: Killercoda 또는 VM에서 결과를 캡처해, 1~3차시를 종합한 실습일지를 LMS 과제 게시판에
 업로드하세요.
 
-- 2차시: ① `minikube service myapp --url`로 확인한 URL ② 그 URL로 curl 접속한 결과(nginx 환영
-  페이지 HTML)
+- 2차시
+  - Killercoda: ① `kubectl get svc myapp`으로 확인한 NodePort 번호 ② `curl localhost:{NodePort 번호}`로
+    접속한 결과(nginx 환영 페이지 HTML)
+  - 개인 VM: ① `minikube service myapp --url`로 확인한 URL ② 그 URL로 curl 접속한 결과(nginx 환영
+    페이지 HTML)
 - 3차시: ① `kubectl get endpoints myapp` 결과 ② 반복 curl 실행 결과
 
 **다음 주 예고**: 6주차에서는 설정값과 비밀번호를 코드에서 분리해서 관리하는 ConfigMap과 Secret,
