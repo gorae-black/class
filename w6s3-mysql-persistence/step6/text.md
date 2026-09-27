@@ -1,21 +1,17 @@
-새로 생성된 Pod에 접속해서 아까 넣은 데이터가 그대로 조회되는지 SELECT로 확인합니다. (`{새
-파드이름}`은 앞 단계에서 확인한 새 Pod 이름으로 바꿔서 실행하세요.)
+새 컨테이너를 만들고 MySQL 프로세스가 초기화되는 데 **10~20초 정도** 걸립니다. 너무 빨리 접속을
+시도하면 아직 컨테이너가 준비되지 않아서 오류가 날 수 있으니, `kubectl get pods`로 상태를
+확인하면서 기다려주세요.
 
 ```
-kubectl exec -it {새 파드이름} -- mysql -uroot -pSuperSecret123 \
-  -e "USE testdb; SELECT * FROM users;"
+kubectl get pods
 ```
 
 **실행 결과 예시**
 
 ```
-+------+------+
-| id   | name |
-+------+------+
-|    1 | kim  |
-+------+------+
+NAME                    READY   STATUS    RESTARTS   AGE
+mysql-7d9c6d8f45-k8m2p  1/1     Running   0          15s
 ```
 
-Pod가 완전히 새로 만들어졌는데도 `kim` 데이터가 그대로 조회되면 성공입니다. 만약 PVC 없이 그냥
-MySQL을 배포했다면 이 데이터는 전부 사라졌을 것입니다 — PVC 덕분에 데이터가 Pod의 생명주기와
-무관하게 살아남는다는 것을 직접 확인한 것입니다.
+새로 생긴 Pod의 이름(이전 단계와 다른 이름)이 보이고, STATUS가 `Running`, READY가 `1/1`이 되면
+다음 단계로 진행하세요.

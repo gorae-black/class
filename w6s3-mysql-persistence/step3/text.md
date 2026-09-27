@@ -1,20 +1,16 @@
-`kubectl exec`로 Pod에 접속해서 mysql 클라이언트로 테이블을 만들고 데이터를 한 줄 넣습니다.
-(`{mysql파드이름}`은 앞 단계에서 확인한 실제 Pod 이름으로 바꿔서 실행하세요.)
+MySQL은 시작할 때 내부적으로 초기화 작업을 하기 때문에 nginx 같은 가벼운 이미지보다 시간이 조금
+더 걸립니다. `kubectl get pods`로 STATUS가 `Running`이 될 때까지 확인합니다.
 
 ```
-kubectl exec -it {mysql파드이름} -- mysql -uroot -pSuperSecret123 \
-  -e "CREATE DATABASE testdb; USE testdb; CREATE TABLE users (id INT, name VARCHAR(20)); INSERT INTO users VALUES (1, 'kim'); SELECT * FROM users;"
+kubectl get pods
 ```
 
 **실행 결과 예시**
 
 ```
-+------+------+
-| id   | name |
-+------+------+
-|    1 | kim  |
-+------+------+
+NAME                    READY   STATUS    RESTARTS   AGE
+mysql-7d9c6d8f45-x2n7q  1/1     Running   0          40s
 ```
 
-`kim`이라는 데이터가 조회되면, 테이블 생성과 데이터 삽입이 정상적으로 끝난 것입니다. 이 결과를 잘
-기억해두세요 — 잠시 후 Pod를 삭제한 다음에도 이 데이터가 그대로인지 비교할 것입니다.
+STATUS가 `Running`이고 READY가 `1/1`이 되면 다음 단계로 진행하세요. (Pod 이름의 뒤쪽 문자열은
+매번 랜덤하게 생성되므로, 실제 화면에 나온 이름을 이후 명령어에 그대로 사용하세요.)

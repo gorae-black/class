@@ -1,17 +1,15 @@
-새 컨테이너를 만들고 MySQL 프로세스가 초기화되는 데 **10~20초 정도** 걸립니다. 너무 빨리 접속을
-시도하면 아직 컨테이너가 준비되지 않아서 오류가 날 수 있으니, `kubectl get pods`로 상태를
-확인하면서 기다려주세요.
+이제 이 Pod를 강제로 삭제해보겠습니다. Deployment로 배포했기 때문에, Pod가 사라지면 원하는
+개수(1개)를 유지하기 위해 자동으로 새 Pod가 만들어집니다.
 
 ```
-kubectl get pods
+kubectl delete pod {mysql파드이름}
 ```
 
 **실행 결과 예시**
 
 ```
-NAME                    READY   STATUS    RESTARTS   AGE
-mysql-7d9c6d8f45-k8m2p  1/1     Running   0          15s
+pod "mysql-7d9c6d8f45-x2n7q" deleted
 ```
 
-새로 생긴 Pod의 이름(이전 단계와 다른 이름)이 보이고, STATUS가 `Running`, READY가 `1/1`이 되면
-다음 단계로 진행하세요.
+`deleted` 메시지가 나오면 정상입니다. 잠시 후 `kubectl get pods`를 실행하면 이름이 다른 새 Pod가
+생성되고 있는 것을 볼 수 있습니다.

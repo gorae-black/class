@@ -1,15 +1,20 @@
-이제 이 Pod를 강제로 삭제해보겠습니다. Deployment로 배포했기 때문에, Pod가 사라지면 원하는
-개수(1개)를 유지하기 위해 자동으로 새 Pod가 만들어집니다.
+`kubectl exec`로 Pod에 접속해서 mysql 클라이언트로 테이블을 만들고 데이터를 한 줄 넣습니다.
+(`{mysql파드이름}`은 앞 단계에서 확인한 실제 Pod 이름으로 바꿔서 실행하세요.)
 
 ```
-kubectl delete pod {mysql파드이름}
+kubectl exec -it {mysql파드이름} -- mysql -uroot -pSuperSecret123 -e "CREATE DATABASE testdb; USE testdb; CREATE TABLE users (id INT, name VARCHAR(20)); INSERT INTO users VALUES (1, 'kim'); SELECT * FROM users;"
 ```
 
 **실행 결과 예시**
 
 ```
-pod "mysql-7d9c6d8f45-x2n7q" deleted
+mysql: [Warning] Using a password on the command line interface can be insecure.
++------+------+
+| id   | name |
++------+------+
+|    1 | kim  |
++------+------+
 ```
 
-`deleted` 메시지가 나오면 정상입니다. 잠시 후 `kubectl get pods`를 실행하면 이름이 다른 새 Pod가
-생성되고 있는 것을 볼 수 있습니다.
+`kim`이라는 데이터가 조회되면, 테이블 생성과 데이터 삽입이 정상적으로 끝난 것입니다. 첫 줄의 `[Warning]`은 비밀번호를 명령어에 직접 적었다는 안내일 뿐이니 무시해도 됩니다. 이 결과를 잘
+기억해두세요 — 잠시 후 Pod를 삭제한 다음에도 이 데이터가 그대로인지 비교할 것입니다.

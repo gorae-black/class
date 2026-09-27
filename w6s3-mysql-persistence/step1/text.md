@@ -1,49 +1,46 @@
-공식 `mysql` 이미지를 사용합니다. 환경변수로 `MYSQL_ROOT_PASSWORD`를 지정해서 루트 비밀번호를
-설정하고, 지난 2차시에 만든 PVC(`mysql-pvc`)를 MySQL이 실제로 데이터를 저장하는 경로인
-`/var/lib/mysql`에 마운트합니다. 이 순간부터 MySQL 컨테이너 안에서는 그냥 평범한 로컬 디렉토리에
-저장하는 것처럼 보이지만, 실제로는 hostPath 디렉토리에 데이터가 저장됩니다.
-
-Deployment로 배포해야 Pod를 삭제했을 때 자동으로 새 Pod가 만들어집니다.
+이 Killercoda 환경은 매번 새로 시작되는 클러스터라서, 지난 2차시에 만든 PV와 PVC가 남아 있지 않습니다.
+그래서 먼저 2차시와 같은 `pv.yaml`, `pvc.yaml`을 다시 만들어 적용합니다.
 
 ```
-cat << 'EOF' > mysql-deployment.yaml
-apiVersion: apps/v1
-kind: Deployment
+cat << 'EOF' > pv.yaml
+apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: mysql
+  name: mysql-pv
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: mysql
-  template:
-    metadata:
-      labels:
-        app: mysql
-    spec:
-      containers:
-        - name: mysql
-          image: mysql:8.0
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              value: "SuperSecret123"
-          ports:
-            - containerPort: 3306
-          volumeMounts:
-            - name: mysql-data
-              mountPath: /var/lib/mysql
-      volumes:
-        - name: mysql-data
-          persistentVolumeClaim:
-            claimName: mysql-pvc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /data/mysql
 EOF
-kubectl apply -f mysql-deployment.yaml
+kubectl apply -f pv.yaml
+
+cat << 'EOF' > pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ""
+EOF
+kubectl apply -f pvc.yaml
+kubectl get pvc
 ```
 
 **실행 결과 예시**
 
 ```
-deployment.apps/mysql created
+persistentvolume/mysql-pv created
+persistentvolumeclaim/mysql-pvc created
+NAME        STATUS   VOLUME     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+mysql-pvc   Bound    mysql-pv   1Gi        RWO                           <unset>                 1s
 ```
 
-`created` 메시지가 나오면 배포가 정상적으로 시작된 것입니다.
+STATUS가 `Bound`로 나오면 준비가 끝난 것입니다.

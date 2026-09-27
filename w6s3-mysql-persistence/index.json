@@ -7,28 +7,32 @@
     },
     "steps": [
       {
-        "title": "PVC를 연결한 MySQL 배포하기",
+        "title": "PV/PVC 다시 만들기 (2차시 복습)",
         "text": "step1/text.md"
       },
       {
-        "title": "MySQL Pod 실행 확인하기",
+        "title": "PVC를 연결한 MySQL 배포하기",
         "text": "step2/text.md"
       },
       {
-        "title": "MySQL에 접속해 테이블과 데이터 만들기",
+        "title": "MySQL Pod 실행 확인하기",
         "text": "step3/text.md"
       },
       {
-        "title": "Pod를 강제로 삭제하기",
+        "title": "MySQL에 접속해 테이블과 데이터 만들기",
         "text": "step4/text.md"
       },
       {
-        "title": "새 Pod가 준비될 때까지 기다리기",
+        "title": "Pod를 강제로 삭제하기",
         "text": "step5/text.md"
       },
       {
-        "title": "데이터가 그대로인지 확인하기",
+        "title": "새 Pod가 준비될 때까지 기다리기",
         "text": "step6/text.md"
+      },
+      {
+        "title": "데이터가 그대로인지 확인하기",
+        "text": "step7/text.md"
       }
     ],
     "finish": {
