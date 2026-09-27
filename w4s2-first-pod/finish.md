@@ -6,5 +6,4 @@
 동일하게 `kubectl run mypod --image=nginx`, `kubectl get pods`, `kubectl describe pod mypod`,
 `kubectl logs mypod`를 순서대로 실행해보세요.
 
-(선택) `kubectl delete pod mypod` 후 `kubectl get pods`로 사라졌는지도 확인해보세요. 필수 제출
-항목은 아닙니다.
+(선택) `kubectl delete pod mypod` 후 `kubectl get pods`로 사라졌는지도 확인해보세요.

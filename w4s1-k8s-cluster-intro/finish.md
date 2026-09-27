@@ -3,5 +3,4 @@
 **다음 순서**
 
 개인 로컬 VM(cloud-lab)에서 `minikube start`를 실행해 로컬 1노드 클러스터를 켜고,
-`kubectl get nodes`로 노드가 `Ready` 상태인지 확인해주세요. (이번 차시는 확인 성격의 실습으로,
-별도 제출은 없습니다.)
+`kubectl get nodes`로 노드가 `Ready` 상태인지 확인해주세요.
