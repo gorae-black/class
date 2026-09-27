@@ -1,15 +1,8 @@
 여기까지 오늘의 Killercoda 실습입니다. 수고하셨습니다!
 
-**오늘 배운 내용 정리**
-
-첫째, ConfigMap은 일반 설정값을 코드에서 분리해 관리합니다.
-둘째, Secret은 비밀번호 같은 민감 정보를 조금 더 엄격하게 관리하지만, Base64 인코딩 자체는 암호화가
-아니라는 점을 기억하세요.
-
 **다음 순서**
 
-개인 로컬 VM에서도 `kubectl create configmap`으로 간단한 설정값을 하나, `kubectl create secret
-generic`으로 비밀값을 하나 만들어보세요. `kubectl get configmap`, `kubectl get secret`으로
-확인해보세요.
-
-다음 2차시에서는 "데이터를 영구적으로 저장하는 방법", PV와 PVC를 배웁니다.
+개인 VM에서 `minikube start` 후 Killercoda와 같은 순서(Step 1~5)로 ConfigMap·Secret을 만들고, Base64
+디코딩과 Pod 환경변수 확인까지 진행해보세요. 단, `\`로 여러 줄에 나눠 쓴 명령(`kubectl create configmap`,
+`kubectl create secret generic`)은 VM에서는 한 줄로 입력하세요. VM 콘솔에 여러 줄 명령을 붙여넣으면 첫 줄만
+실행되는 경우가 있기 때문입니다.

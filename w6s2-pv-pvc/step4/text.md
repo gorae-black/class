@@ -7,8 +7,8 @@ kubectl get pvc
 **실행 결과 예시**
 
 ```
-NAME        STATUS   VOLUME     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-mysql-pvc   Bound    mysql-pv   1Gi        RWO                           5s
+NAME        STATUS   VOLUME     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+mysql-pvc   Bound    mysql-pv   1Gi        RWO                           <unset>                 5s
 ```
 
 ```
@@ -18,8 +18,8 @@ kubectl get pv
 **실행 결과 예시**
 
 ```
-NAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM               STORAGECLASS   AGE
-mysql-pv   1Gi        RWO            Retain           Bound    default/mysql-pvc                  15s
+NAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM               STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+mysql-pv   1Gi        RWO            Retain           Bound    default/mysql-pvc                  <unset>                          15s
 ```
 
 두 명령 모두 STATUS가 **Bound**로 나오면 성공입니다. 만약 `Pending`이라면 PV와 PVC의 조건(용량,
