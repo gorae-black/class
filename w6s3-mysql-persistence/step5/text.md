@@ -8,7 +8,7 @@ kubectl delete pod {mysql파드이름}
 **실행 결과 예시**
 
 ```
-pod "mysql-7d9c6d8f45-x2n7q" deleted
+pod "mysql-7d9c6d8f45-x2n7q" deleted from default namespace
 ```
 
 `deleted` 메시지가 나오면 정상입니다. 잠시 후 `kubectl get pods`를 실행하면 이름이 다른 새 Pod가
