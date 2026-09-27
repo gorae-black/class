@@ -8,18 +8,24 @@ kubectl delete pod {pod-name}
 **실행 결과 예시**
 
 ```
-pod "web-6f9b8c7d5-aaaaa" deleted
+pod "web-6f9b8c7d5-aaaaa" deleted from default namespace
 ```
 
 이 명령을 실행한 직후, 백그라운드로 켜둔 `-w` 창에 아래와 같은 흐름이 실시간으로 이어서
 출력됩니다.
 
 ```
-web-6f9b8c7d5-aaaaa   1/1     Terminating   0          3m
-web-6f9b8c7d5-ddddd    0/1     Pending             0          0s
-web-6f9b8c7d5-ddddd    0/1     ContainerCreating   0          0s
-web-6f9b8c7d5-ddddd    1/1     Running             0          2s
+web-6f9b8c7d5-aaaaa   1/1     Terminating         0          3m
+web-6f9b8c7d5-ddddd   0/1     Pending             0          0s
+web-6f9b8c7d5-ddddd   0/1     Pending             0          0s
+web-6f9b8c7d5-ddddd   0/1     ContainerCreating   0          0s
+web-6f9b8c7d5-aaaaa   0/1     Completed           0          3m
+web-6f9b8c7d5-aaaaa   0/1     Completed           0          3m
+web-6f9b8c7d5-ddddd   1/1     Running             0          2s
 ```
+
+(백그라운드 출력이라 `pod "..." deleted` 메시지와 순서가 섞여 보일 수 있습니다. `Pending`이 두 번
+나오거나, 삭제한 Pod가 `Completed`로 몇 줄 더 표시된 뒤 사라지는 것도 정상입니다.)
 
 삭제한 Pod가 `Terminating`으로 사라지자마자, K8s가 곧바로 새 이름의 Pod를 `Pending` →
 `ContainerCreating` → `Running` 순서로 자동 생성해서 원래 개수(3개)를 다시 맞추는 것을
